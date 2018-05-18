@@ -16,9 +16,9 @@ git clone https://github.com/danielscholl/web-demo-classic.git web-demo-classic
 
 ### Build and Test the Project on Localhost
 
-1. Build the Project <ctrl><shift><b>
+1. Build the Project `<ctrl><shift><b>`
 
-1. Test the project <F5>
+1. Test the project `<F5>`
 
 
 ### Create ASM Classic Resources
@@ -58,6 +58,7 @@ git clone https://github.com/danielscholl/web-demo-classic.git web-demo-classic
 	- Add a SQL Server User: 'azureuser'
 	- Connect as azureuser
 	- Create a Database  name:db
+	- Open Firewall Rule for 1433
 
 1. Update the DB Connection WebWorker Role "Settings" __Cloud__ Configuration and WebMVC/Web.Release.config
 
