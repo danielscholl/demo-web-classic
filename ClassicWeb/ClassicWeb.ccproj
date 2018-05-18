@@ -63,7 +63,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PublishProfile Include="Profiles\dsclassicwebProduction.azurePubxml" />
+    <PublishProfile Include="Profiles\ClassicCommonProduction.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>

@@ -5,7 +5,7 @@
 *.csfg
 app.config
 Web.config
-Web.*.config
+WebMVC/Web.Release.config
 
 # User-specific files
 *.suo
