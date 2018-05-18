@@ -3,9 +3,6 @@
 
 # Override protected files from updating
 *.csfg
-app.config
-Web.config
-WebMVC/Web.Release.config
 
 # User-specific files
 *.suo
