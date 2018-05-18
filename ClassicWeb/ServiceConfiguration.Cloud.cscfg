@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ClassicWeb" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="WebMVC">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName={storageaccount};AccountKey={storagekey}" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName={storageaccount};AccountKey={storagekey}" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="azureuser" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEDWeou+Wo7CVRF1r4XVX2tcwDQYJKoZIhvcNAQEBBQAEggEALcoU8H7M6GbJ321WF+NAOU+vF5lpSlnV0HS3JlGnYXRb9WI7yFB/PM1rDqc7swhAUDJtCjaavnHttnl3iTsYinylHfniWV9zIXnJ7iZ8co4k6XQOziuvLmwSQNCUK4BkCDJi4dboEqNoG+PTeXy/uL9EkGcVFzRol2puAgJKEwxyXb+cfic4jXWTSC0DYcFxHXT2Wbvbhz89YSJkmdNUxW8CNkItQgZX7OL9z5X9FjoKG0oT6etoqsfWCxi9Ohg7A1M4aFXBuJk63SiV1clgP/Dx/fFjgm3azNDmHUAeRsVvsVtT3B5vjpgW2wtIvMK+bfgFFKHeNJl5CbEANL8JgzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLCIajHqS9SlgBB3VFdsrF6xvQypX7SoEFEL" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-05-11T23:59:59.0000000-05:00" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="b19c0c20-7205-4603-be74-3b6db9286549" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="A3DD432838D55995B70F0CA0E610A6F9B816E853" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="WebWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=dsclassicweb;AccountKey={storagekey}" />
+      <Setting name="StorageConnectionString" value="DefaultEndpointsProtocol=https;AccountName={storageaccount};AccountKey={storagekey}" />
+      <Setting name="AdsDbConnectionString" value="Server=tcp:{servername}.database.windows.net,1433;Initial Catalog=db;Persist Security Info=False;User ID={username};Password={password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="azureuser" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEDWeou+Wo7CVRF1r4XVX2tcwDQYJKoZIhvcNAQEBBQAEggEALcoU8H7M6GbJ321WF+NAOU+vF5lpSlnV0HS3JlGnYXRb9WI7yFB/PM1rDqc7swhAUDJtCjaavnHttnl3iTsYinylHfniWV9zIXnJ7iZ8co4k6XQOziuvLmwSQNCUK4BkCDJi4dboEqNoG+PTeXy/uL9EkGcVFzRol2puAgJKEwxyXb+cfic4jXWTSC0DYcFxHXT2Wbvbhz89YSJkmdNUxW8CNkItQgZX7OL9z5X9FjoKG0oT6etoqsfWCxi9Ohg7A1M4aFXBuJk63SiV1clgP/Dx/fFjgm3azNDmHUAeRsVvsVtT3B5vjpgW2wtIvMK+bfgFFKHeNJl5CbEANL8JgzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLCIajHqS9SlgBB3VFdsrF6xvQypX7SoEFEL" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-05-11T23:59:59.0000000-05:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="b19c0c20-7205-4603-be74-3b6db9286549" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="A3DD432838D55995B70F0CA0E610A6F9B816E853" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <NetworkConfiguration>
+    <!-- Name of the target Virtual Network -->
+    <VirtualNetworkSite name="Group classicCommon classicVNet" />
+    <!-- Associating a Role to a Specific Subnet by name -->
+    <AddressAssignments>
+      <InstanceAddress roleName="WebMVC">
+        <Subnets>
+          <Subnet name="MiddleTier" />
+        </Subnets>
+      </InstanceAddress>
+    </AddressAssignments>
+  </NetworkConfiguration>
+</ServiceConfiguration>

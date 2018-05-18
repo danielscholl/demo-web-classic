@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ClassicWeb" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="WebMVC">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="azureuser" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEDWeou+Wo7CVRF1r4XVX2tcwDQYJKoZIhvcNAQEBBQAEggEALcoU8H7M6GbJ321WF+NAOU+vF5lpSlnV0HS3JlGnYXRb9WI7yFB/PM1rDqc7swhAUDJtCjaavnHttnl3iTsYinylHfniWV9zIXnJ7iZ8co4k6XQOziuvLmwSQNCUK4BkCDJi4dboEqNoG+PTeXy/uL9EkGcVFzRol2puAgJKEwxyXb+cfic4jXWTSC0DYcFxHXT2Wbvbhz89YSJkmdNUxW8CNkItQgZX7OL9z5X9FjoKG0oT6etoqsfWCxi9Ohg7A1M4aFXBuJk63SiV1clgP/Dx/fFjgm3azNDmHUAeRsVvsVtT3B5vjpgW2wtIvMK+bfgFFKHeNJl5CbEANL8JgzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLCIajHqS9SlgBB3VFdsrF6xvQypX7SoEFEL" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-05-11T23:59:59.0000000-05:00" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="b19c0c20-7205-4603-be74-3b6db9286549" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="A3DD432838D55995B70F0CA0E610A6F9B816E853" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="WebWorker">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="StorageConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="AdsDbConnectionString" value="Data Source=(localdb)\v11.0; Initial Catalog=dbAds; Integrated Security=True; MultipleActiveResultSets=True;" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="azureuser" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEDWeou+Wo7CVRF1r4XVX2tcwDQYJKoZIhvcNAQEBBQAEggEALcoU8H7M6GbJ321WF+NAOU+vF5lpSlnV0HS3JlGnYXRb9WI7yFB/PM1rDqc7swhAUDJtCjaavnHttnl3iTsYinylHfniWV9zIXnJ7iZ8co4k6XQOziuvLmwSQNCUK4BkCDJi4dboEqNoG+PTeXy/uL9EkGcVFzRol2puAgJKEwxyXb+cfic4jXWTSC0DYcFxHXT2Wbvbhz89YSJkmdNUxW8CNkItQgZX7OL9z5X9FjoKG0oT6etoqsfWCxi9Ohg7A1M4aFXBuJk63SiV1clgP/Dx/fFjgm3azNDmHUAeRsVvsVtT3B5vjpgW2wtIvMK+bfgFFKHeNJl5CbEANL8JgzAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLCIajHqS9SlgBB3VFdsrF6xvQypX7SoEFEL" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-05-11T23:59:59.0000000-05:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="b19c0c20-7205-4603-be74-3b6db9286549" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="A3DD432838D55995B70F0CA0E610A6F9B816E853" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
